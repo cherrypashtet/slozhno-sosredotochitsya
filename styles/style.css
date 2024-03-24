@@ -341,16 +341,17 @@
   }
 }
 
-@media (width <= 375px) {
+@media (width <= 430px) {
   :root {
     --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
   .header {
     min-height: 668px;
-    width: 375px;
+    min-width: 375px;
   }
   .header__theme-menu-list {
     padding-inline-end: 10px;
+    padding-block-end: 15px;
   }
   .header__title {
     line-height: 95.7px;
@@ -362,6 +363,7 @@
     align-self: center;
     padding-inline: 10px;
     padding-block-start: 0;
+    padding-block-end: 10px;
   }
   .cover {
     padding-block-start: 40px;
