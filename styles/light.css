@@ -21,7 +21,13 @@
     --bg-color: #FFF1F7;
     --text-color: #353430;
     --bg-image: url(../images/cover-image-light.png);
+    --accent-text-color: #353430;
+    --block-header-color: #353430;
+    --decoration-color: rgba(50, 49, 45, 0.4);
     }
+  .header__recording {
+    visibility: hidden;
+  }
 }
 
 .page.theme_light {  

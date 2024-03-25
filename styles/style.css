@@ -16,7 +16,7 @@
 .header {
   position: relative;
   max-width: 1024px;
-  min-height: 100vh;
+  height: max(100vh, 668px);
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
 }
@@ -103,6 +103,8 @@
   height: 26px;
 }
 
+/* сброс outline для кнопки и ссылки есть в global.css  */
+
 .header__theme-menu-button:hover {
   border: 1px solid var(--decoration-color);
 }
@@ -112,15 +114,15 @@
 }
 
 .paragraph-link:hover {
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid currentColor;
 }
 
 .paragraph-link:focus-visible {
-  border: 1px solid var(--text-color);
+  border: 1px solid currentColor;
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--accent-text-color);
+  border: 1px solid currentColor;
   pointer-events: none;
 }
 
@@ -292,7 +294,7 @@
 .footer {
   max-width: 1024px;
   position: relative;
-  height: 100vh;
+  height: max(100vh, 668px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -341,6 +343,36 @@
   }
 }
 
+@media (width <= 558px) {
+  .content__section {
+    display: flex;
+    flex-direction: column;
+    margin-block-end: 50px;
+  }
+  .gallery-images {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header__paragraph {
+    max-width: 100%;
+    align-self: center;
+    padding-inline: 10px;
+    padding-block-start: 0;
+    padding-block-end: 10px;
+    justify-self: center;
+  }
+  .why__section {
+    padding-inline-start: 20px;
+  }
+  .why-block {
+    padding-inline-start: 0px;
+  }
+  .header-why {
+    padding-inline-start: 0px;
+  }
+}
+
 @media (width <= 430px) {
   :root {
     --logo-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -358,20 +390,11 @@
     text-align: start;
     padding-inline: 10px;
   }
-  .header__paragraph {
-    max-width: 375px;
-    align-self: center;
-    padding-inline: 10px;
-    padding-block-start: 0;
-    padding-block-end: 10px;
-  }
   .cover {
     padding-block-start: 40px;
   }
-  .content__section {
-    display: flex;
-    flex-direction: column;
-    margin-block-end: 50px;
+  .why__section {
+    padding-inline-start: 0px;
   }
   .header-why {
     padding-inline-start: 10px;
@@ -380,7 +403,7 @@
     max-width: 355px;
   }
   .what__section {
-    padding-inline: 0;
+    padding-inline: 0px;
   }
   .header-what {
     padding-inline-start: 10px;
@@ -389,7 +412,7 @@
     padding-inline: 10px;
   }
   .how__section .content__section-block {
-    padding-inline: 0;
+    padding-inline: 0px;
   }
   .header-how {
     max-width: 355px;
@@ -397,11 +420,6 @@
   .gallery {
     padding-inline: 10px;
     margin-block-end: 40px;
-  }
-  .gallery-images {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
   }
   .gallery-header {
     margin-block-end: 10px;
@@ -426,7 +444,7 @@
   }
   .content__section-block-header {
     padding-inline-start: 0px;
-    max-width: 355px;
+    max-width: 100%;
   }
   .footer {
     min-height: 668px;

@@ -11,6 +11,9 @@
   --bg-color: #000028;
   --text-color: #F1B2CE;
   --block-header-color: #000028;
+  --accent-text-color: #FF0070;
+  --decoration-color: rgba(255, 0, 112, 0.4);
+  --bg-image: url(../images/cover-image-dark.png);
 }
 
 .theme_dark.page {
